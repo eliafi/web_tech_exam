@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const cors = require('cors'); // Import cors
 const path = require('path');
 const app = express();
-const port = 5000; // Changed port to 5000
+// const port = 5000; // Changed port to 5000
+
+const port = process.env.PORT || 5000; // Use process.env.PORT for Heroku
 
 app.use(cors()); // Use cors
 app.use(bodyParser.json());
