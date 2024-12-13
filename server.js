@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 // Connect to MongoDB Atlas
 const mongoURI = 'mongodb+srv://eliayekpley:zbEMqHN7P2ytjK0c@cluster0.i3vlf.mongodb.net/event_management?retryWrites=true&w=majority&appName=Cluster0';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
