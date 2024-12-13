@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--background-dark);
+    height: 100vh;
+    padding-top: 20px;
+    color: var(--text-white);
+    position: fixed;
+}
+
+.sidebar .sidebar-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .sidebar-links a:hover {
+    background-color: var(--light-purple);
+}
+
+.sidebar .sidebar-links a.active {
+    background-color: var(--btn-primary-bg);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+}
+
+.functionalities-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+}
+
+.functionalities-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.event-list-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.event-list-table th, .event-list-table td {
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    text-align: left;
+}
+
+.event-list-table th {
+    background-color: var(--light-purple);
+}
