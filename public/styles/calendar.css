@@ -2,21 +2,34 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .calendar-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: calc(33.333% - 20px);
     box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calendar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .calendar-card h3 {
     margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .calendar-card p {
     margin: 10px 0;
+    color: #333;
+    line-height: 1.6;
 }
