@@ -14,11 +14,16 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(response => response.json())
     .then(data => {
         if (data.user) {
+            alert('Login successful');
             localStorage.setItem('user', JSON.stringify(data.user));
             window.location.href = 'events.html';
         } else {
-            alert(data.error);
+            alert(data.error || 'Login failed');
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while logging in. Please try again.');
+    });
 });
+// Compare this snippet from public/scripts/profile.js:

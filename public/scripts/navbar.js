@@ -17,3 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    if (!user) {
+        // User is not logged in, redirect to login page
+        window.location.href = 'login.html';
+    }
+});
