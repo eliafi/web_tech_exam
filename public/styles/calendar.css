@@ -1,10 +1,70 @@
+:root {
+    --purple: #6B4F96;
+    --pink: #FF86EB;
+    --white: #FFFFFF;
+    --light-purple: #A29BFE;
+    --light-pink: #F8B1F9;
+    --background-light: #F9F9F9;
+    --background-dark: #212224;
+    --text-dark: #212224;
+    --text-light-gray: #7B7B7B;
+    --text-white: #FFFFFF;
+    --btn-primary-bg: #007bff;
+    --btn-secondary-bg: #FF86EB;
+    --btn-text: #FFFFFF;
+    --btn-primary-hover: #0056b3;
+    --btn-secondary-hover: #F57FCC;
+    --border-light: #D9D9D9;
+    --border-dark: #212224;
+    --max-width: 1200px;
+    --spacing-unit: 1rem;
+    --line-height: 1.6;
+    --font-size-default: 1rem;
+    --font-size-heading: 2rem;
+    --font-size-subheading: 1.2rem;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --yellow: #ffc107;
+    --yellow-hover: #ffa000;
+    --background-grey: #2E2E2E;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-grey);
+    color: var(--text-dark);
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    max-width: var(--max-width);
+}
+
+.card {
+    background: var(--purple);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    color: var(--text-white);
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
 #calendar {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: var(--background-grey);
+    color: var(--text-white);
 }
 
 .calendar-card {
@@ -32,4 +92,62 @@
     margin: 10px 0;
     color: #333;
     line-height: 1.6;
+}
+
+.fc-toolbar {
+    background: var(--background-dark);
+    color: var(--text-white);
+}
+
+.fc-button {
+    background-color: var(--btn-primary-bg);
+    border: none;
+    color: var(--btn-text);
+}
+
+.fc-button:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.fc-daygrid-day {
+    background: var(--background-grey);
+    border: 1px solid var(--border-dark);
+}
+
+.fc-daygrid-day:hover {
+    background: var(--light-purple);
+}
+
+.fc-event {
+    background: var(--pink);
+    border: none;
+    color: var(--text-white);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    #calendar {
+        width: 100%;
+        overflow-x: auto;
+    }
 }

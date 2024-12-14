@@ -15,7 +15,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         isAdmin
     };
     
-    fetch('http://localhost:5000/api/register', {
+    fetch('/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
