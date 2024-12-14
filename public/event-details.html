@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar vertical-navbar">
         <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
         <ul id="navLinks" class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li><a href="profile.html" id="profileLink">Profile</a></li>
             <li id="adminLink" style="display: none;"><a href="admin.html">Admin</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
         </ul>
     </nav>
     <div class="container">
         <div class="card">
             <h2>Event Details</h2>
-            <div id="eventDetails" class="event-details"></div>
-            <button id="rsvpButton" onclick="rsvpEvent()">RSVP</button>
+            <div id="eventDetails"></div>
+            <button id="rsvpButton">RSVP</button>
         </div>
     </div>
     <script src="scripts/event-details.js"></script>
